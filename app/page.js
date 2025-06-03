@@ -1,3 +1,7 @@
-export default function Home() {
-  return <h1>Hello, React (Next.js)!</h1>;
+export default function HomePage() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <h1 className="text-3xl font-bold">Welcome to INTERNHUB!</h1>
+    </div>
+  );
 }

@@ -1,15 +1,19 @@
-import { useState } from "react";
+"use client";
+import { useState } from "react"
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simple validation example
     if (email === "user@example.com" && password === "password") {
-      setMessage("Login successful!");
+      setMessage("Login successful!")
+       router.push("/dashboard");
     } else {
       setMessage("Invalid email or password.");
     }
